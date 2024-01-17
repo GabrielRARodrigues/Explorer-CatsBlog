@@ -16,15 +16,17 @@
   <body>
     <div id="app">
       <header class="header">
-        <div class="logo">
-          <img
-            src="./assets/images/logo.svg"
-            alt="Logomarca do Site, uma figura de uma pata de gato dentro de um circulo branco"
-          />
+        <div class="container">
+          <div class="logo">
+            <img
+              src="./assets/images/logo.svg"
+              alt="Logomarca do Site, uma figura de uma pata de gato dentro de um circulo branco"
+            />
+          </div>
 
           <form>
             <fieldset class="input-wrapper">
-              <label for="search" class="input-wrapper__label">
+              <label for="search" class="input-wrapper__label sr-only">
                 Pesquise por artigos
               </label>
               <input
@@ -45,16 +47,28 @@
         </div>
       </header>
 
-      <div class="content">
+      <div class="content container">
         <main class="main">
-          <div class="banner"></div>
+          <div class="banner">
+            <picture>
+              <source
+                srcset="./assets/images/banner-desktop.jpeg"
+                media="(min-width: 1120px)"
+              />
+              <img
+                src="./assets/images/banner-mobile.jpeg"
+                alt="Silhueta de um gato encima de um relevo sobre o pôr do sol"
+              />
+            </picture>
+          </div>
           <section class="main-content">
             <header class="main-content__header">
-              <h2 class="main-content__title">Seriam os gatos astronautas?</h2>
+              <h1 class="main-content__title">Seriam os gatos astronautas?</h1>
 
               <div class="main-content__actions">
                 <button
                   class="main-content_actions__button main-content_actions__button--like"
+                  aria-label="Like, marcar que gostou do post"
                 >
                   <svg
                     width="17"
@@ -73,6 +87,7 @@
                 </button>
                 <button
                   class="main-content_actions__button main-content_actions__button--desike"
+                  aria-label="Dislike, marcar que não gostou do post"
                 >
                   <svg
                     width="17"
@@ -106,23 +121,13 @@
               indicar que os gatos têm uma origem muito mais mística do que se
               pensava anteriormente.
             </p>
+            <br />
+
             <p class="main-content__text">
-              Os gatos são animais fascinantes e cercados de mistérios. De
-              temperamento independente e misterioso, esses felinos são
-              conhecidos por sua agilidade, elegância e um comportamento muitas
-              vezes imprevisível. Contudo, recentemente, uma teoria tem ganhado
-              espaço na internet e entre teóricos de conspiração: seriam os
-              gatos astronautas? A teoria sugere que os gatos não são animais
-              terrestres, mas sim seres extraterrestres enviados para realizar
-              uma missão específica em nosso planeta. Há relatos históricos que
-              apontam para o fato de que os gatos eram considerados seres
-              sagrados em diferentes culturas e até mesmo associados a figuras
-              divinas. Isso poderia indicar que os gatos têm uma origem muito
-              mais mística do que se pensava anteriormente. Além disso, há
-              teóricos que acreditam que os felinos possuem habilidades
-              telepáticas e são capazes de se comunicar com outras espécies
-              alienígenas. Essa crença baseia-se em relatos de pessoas que
-              afirmam terem visto gatos reagindo a estímulos que não são
+              Além disso, há teóricos que acreditam que os felinos possuem
+              habilidades telepáticas e são capazes de se comunicar com outras
+              espécies alienígenas. Essa crença baseia-se em relatos de pessoas
+              que afirmam terem visto gatos reagindo a estímulos que não são
               perceptíveis aos seres humanos, ou até mesmo se comportando de
               maneira incomum durante eventos astronômicos, como uma aurora
               boreal. Esses e outros indícios foram interpretados como sinais de
@@ -134,10 +139,10 @@
           <h2>Artigos relacionados</h2>
 
           <section class="articles">
-            <figure class="articles__item">
+            <figure class="articles__item" data-animation-delay="0.4s">
               <img
                 class="articles_item__image"
-                src="./assets/images/article01.png"
+                src="./assets/images/article01.jpeg"
                 alt=""
               />
 
@@ -149,10 +154,10 @@
                 </p>
               </figcaption>
             </figure>
-            <figure class="articles__item">
+            <figure class="articles__item" data-animation-delay="0.6s">
               <img
                 class="articles_item__image"
-                src="./assets/images/article02.png"
+                src="./assets/images/article02.jpeg"
                 alt=""
               />
 
@@ -164,10 +169,10 @@
                 </p>
               </figcaption>
             </figure>
-            <figure class="articles__item">
+            <figure class="articles__item" data-animation-delay="0.8s">
               <img
                 class="articles_item__image"
-                src="./assets/images/article03.png"
+                src="./assets/images/article03.jpeg"
                 alt=""
               />
 
@@ -179,10 +184,10 @@
                 </p>
               </figcaption>
             </figure>
-            <figure class="articles__item">
+            <figure class="articles__item" data-animation-delay="1s">
               <img
                 class="articles_item__image"
-                src="./assets/images/article04.png"
+                src="./assets/images/article04.jpeg"
                 alt=""
               />
 
@@ -194,10 +199,10 @@
                 </p>
               </figcaption>
             </figure>
-            <figure class="articles__item">
+            <figure class="articles__item" data-animation-delay="1.2s">
               <img
                 class="articles_item__image"
-                src="./assets/images/article05.png"
+                src="./assets/images/article05.jpeg"
                 alt=""
               />
 
@@ -212,7 +217,6 @@
           </section>
         </aside>
       </div>
-
       <footer class="footer">
         <p>© 2023 - Rocketseat Explorer</p>
       </footer>
